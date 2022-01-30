@@ -1,7 +1,12 @@
+import 'reflect-metadata'
 import { Router } from 'express'
-import { makeSignUpController } from '../factories/signup'
 import { adaptRoute } from '../adapters/express-route-adapter'
+import { SignUpController } from '../../presentation/controllers/signup/signup'
+
+import { diContainer } from '../config/dependency-register'
+
+const signUpController: SignUpController = diContainer.resolve('SignUpController')
 
 export default (router: Router): void => {
-  router.post('/signup', adaptRoute(makeSignUpController()))
+  router.post('/signup', adaptRoute(signUpController))
 }

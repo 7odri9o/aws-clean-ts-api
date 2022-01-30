@@ -1,5 +1,9 @@
 import { AddAccount, AddAccountModel, AccountModel, AddAccountRepository, Encrypter } from './db-add-account-protocols'
 
+import { injectable } from 'tsyringe'
+
+@injectable()
+
 export class DbAddAccount implements AddAccount {
   private readonly encrypter: Encrypter
   private readonly addAccountRepository: AddAccountRepository

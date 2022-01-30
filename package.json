@@ -27,6 +27,7 @@
   "devDependencies": {
     "@shelf/jest-mongodb": "^2.1.0",
     "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.13",
     "@types/jest": "^27.0.2",
     "@types/mongodb": "^4.0.7",
     "@types/node": "^16.11.6",
@@ -53,6 +54,8 @@
     "express": "^4.17.1",
     "fast-glob": "^3.2.7",
     "mongodb": "^4.1.4",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.6.0",
     "validator": "^13.7.0"
   }
 }
